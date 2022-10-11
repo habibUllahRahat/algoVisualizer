@@ -1,0 +1,258 @@
+* {
+  padding: 0;
+  margin: 0;
+
+}
+a:active,a:focus,a:visited{
+  color: black;
+}
+body {
+  background-color: #312c2c;
+}
+
+#header {
+  position: fixed;
+  display: flex;
+  background-color: white;
+  height: 4rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  
+}
+
+#header > div {
+  flex-grow: -1;
+}
+#inputSection{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 4rem;
+  width: 100%;
+  height: fit-content;
+  padding: .5rem;
+  background-color: rgba(113, 255, 255, 0.582);
+}
+#inputSection #secondOption{
+  display: none;
+}
+
+#inputSection #thirdOption{
+  display: none;
+}
+#indicator-container {
+  display: flex;
+}
+.indicator {
+  display: flex;
+  font-weight: bold;
+  margin: 1rem 2rem;
+}
+.indicator-block {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+#start-indicator {
+  background-color: green;
+}
+#end-indicator {
+  background-color: red;
+}
+#visited-indicator {
+  background-color: yellow;
+}
+.slideContainer {
+  margin-right: 2rem;
+}
+.slider {
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  cursor: pointer;
+}
+.sliderValue {
+  top: 20px;
+  left: 40px;
+}
+.speedValue {
+  top: 20px;
+  left: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#userArrInput{
+  display: inline-block;
+}
+#title {
+  position: relative;
+  top:0.1rem;
+  font-size: 2rem;
+  text-align: center;
+  font-size: 27px;
+  color: black;
+  font-weight: bold;
+}
+
+#sort_type {
+  height: 25px;
+  width: 150px;
+  padding-left: 5px;
+  border-radius: 7px;
+  background: #161824;
+  color: white;
+  outline: none;
+}
+
+#sortDisp {
+  position: relative;
+  top: 4.2rem;
+}
+
+#container {
+  display: flex;
+  top: 2rem;
+  align-self: center;
+  height: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.bar {
+  align-self: flex-end;
+  transition: 0.3s transform linear;
+  position: absolute;
+  border: 2px black;
+  border-radius: 10px 10px 0px 0px;
+  margin-right: 4px;
+  z-index: -1;
+  box-shadow: inset 0 -3em 5em rgba(0, 0, 0, 0.267), 0 0 0 2px rgb(255, 255, 255),
+  0.3em 0.3em 2em rgba(0, 0, 0, 0.418);
+}
+
+.barValue {
+  padding: 2px;
+  align-self: flex-end;
+  transition: 0.3s transform linear;
+  position: absolute;
+  color: rgb(97, 182, 252);
+  border-radius: 4rem 4rem;
+  background-color: rgba(15, 15, 14, 0.603);
+  font-weight: bold;
+  text-align: center;
+  border: 50px red;
+}
+
+.play{
+  position: relative;
+  top :0.2rem;
+  height: 60%;
+
+}
+.askUser{
+  font-size: small;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.normalButton{
+  background-color: #2e3644;
+  margin: .5rem;
+  padding: .2rem .8rem;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  transition: 0.1s ease-out;
+}
+.normalButton:hover{
+  transform: scale(1);
+  transition: 0.6ms linear;
+  font-weight: 600;
+
+
+}
+.normalButton:focus{
+  box-shadow: inset rgb(255, 255, 255);
+}
+input{
+  border: 0px ;
+  height: 2em;
+  border-radius: 5px ;
+}
+input:hover,input:active{
+  background-color: bisque;
+  border: 1px solid #10141b;
+
+}
+#buttonsdiv{
+  position: relative;
+  top:2.15rem;
+  height:5rem;
+  width: 100%;
+  background-color: skyblue;
+}
+.button {
+  font-size: small;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  width: 5rem;
+  height: 2rem;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  margin-top: 15px;
+  color: white;
+  border: none;
+  background: #10141b;
+  letter-spacing: 1.2px;
+  transition: all 0.25s ease-in;
+  outline: none;
+}
+.button:hover {
+  transform: scale(1.1) perspective(1rem);
+  box-shadow: 0px 0px 10px rgba(151, 151, 201, 0.2);
+}
+#buttonsdiv {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#sortButton {
+  margin-right: 10px;
+}
+#stopButton {
+  margin-left: 10px;
+}
+
+#generateButton {
+  font-size: small;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #2e3644;
+  margin: .5rem;
+  padding: .2rem .8rem;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+}
+#generateButton:hover {
+  transform: scale(1.08) perspective(1px);
+}
+
+/* @media (max-width: 900px) {
+  .slidecontainer,
+  #sort_type {
+    margin-top: 0px;
+  }
+
+} */
